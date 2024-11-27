@@ -5,17 +5,17 @@
 #include <screenManager.h>
 
 class WebDataElement {
-   public:
+public:
     virtual ~WebDataElement() = default;
 
     bool isChanged();
     void setChangedStatus(bool changed);
 
-    virtual void parseData(const JsonObject& doc, int32_t defaultColor, int32_t defaultBackground);
+    virtual void parseData(const JsonObject &doc, int32_t defaultColor, int32_t defaultBackground);
 
-    virtual void draw(ScreenManager& manager);
+    virtual void draw(ScreenManager &manager);
 
-   protected:
+protected:
     bool m_changed = false;
 };
 #endif
