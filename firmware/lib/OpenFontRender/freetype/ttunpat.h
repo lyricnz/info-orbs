@@ -17,43 +17,37 @@
 /*                                                                         */
 /***************************************************************************/
 
-
 #ifndef __TTUNPAT_H__
-#define __TTUNPAT_H__
+    #define __TTUNPAT_H__
 
+    #include <ft2build.h>
+    #include FT_FREETYPE_H
 
-#include <ft2build.h>
-#include FT_FREETYPE_H
-
-#ifdef FREETYPE_H
-#error "freetype.h of FreeType 1 has been loaded!"
-#error "Please fix the directory search order for header files"
-#error "so that freetype.h of FreeType 2 is found first."
-#endif
-
+    #ifdef FREETYPE_H
+        #error "freetype.h of FreeType 1 has been loaded!"
+        #error "Please fix the directory search order for header files"
+        #error "so that freetype.h of FreeType 2 is found first."
+    #endif
 
 FT_BEGIN_HEADER
 
+/***************************************************************************
+ *
+ * @constant:
+ *   FT_PARAM_TAG_UNPATENTED_HINTING
+ *
+ * @description:
+ *   A constant used as the tag of an @FT_Parameter structure to indicate
+ *   that unpatented methods only should be used by the TrueType bytecode
+ *   interpreter for a typeface opened by @FT_Open_Face.
+ *
+ */
+    #define FT_PARAM_TAG_UNPATENTED_HINTING FT_MAKE_TAG('u', 'n', 'p', 'a')
 
- /***************************************************************************
-  *
-  * @constant:
-  *   FT_PARAM_TAG_UNPATENTED_HINTING
-  *
-  * @description:
-  *   A constant used as the tag of an @FT_Parameter structure to indicate
-  *   that unpatented methods only should be used by the TrueType bytecode
-  *   interpreter for a typeface opened by @FT_Open_Face.
-  *
-  */
-#define FT_PARAM_TAG_UNPATENTED_HINTING  FT_MAKE_TAG( 'u', 'n', 'p', 'a' )
-
- /* */
+/* */
 
 FT_END_HEADER
 
-
 #endif /* __TTUNPAT_H__ */
-
 
 /* END */
