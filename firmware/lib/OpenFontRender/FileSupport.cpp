@@ -30,7 +30,7 @@ void _default_OFR_fclose(FT_FILE *stream) {
  * @note Need to override this function delay on the device used.
  */
 FT_FILE *_default_OFR_fopen(const char *filename, const char *mode) {
-    return NULL;
+	return NULL;
 }
 
 /*!
@@ -44,7 +44,7 @@ FT_FILE *_default_OFR_fopen(const char *filename, const char *mode) {
  * @note Need to override this function delay on the device used.
  */
 size_t _default_OFR_fread(void *ptr, size_t size, size_t nmemb, FT_FILE *stream) {
-    return 0;
+	return 0;
 }
 
 /*!
@@ -57,7 +57,7 @@ size_t _default_OFR_fread(void *ptr, size_t size, size_t nmemb, FT_FILE *stream)
  * @note Need to override this function delay on the device used.
  */
 int _default_OFR_fseek(FT_FILE *stream, long int offset, int whence) {
-    return -1;
+	return -1;
 }
 
 /*!
@@ -68,7 +68,7 @@ int _default_OFR_fseek(FT_FILE *stream, long int offset, int whence) {
  * @note Need to override this function delay on the device used.
  */
 long int _default_OFR_ftell(FT_FILE *stream) {
-    return -1L;
+	return -1L;
 }
 
 #else
@@ -91,7 +91,7 @@ __attribute__((weak)) void OFR_fclose(FT_FILE *stream) {
  * @note Need to override this function delay on the device used.
  */
 __attribute__((weak)) FT_FILE *OFR_fopen(const char *filename, const char *mode) {
-    return NULL;
+	return NULL;
 }
 
 /*!
@@ -105,7 +105,7 @@ __attribute__((weak)) FT_FILE *OFR_fopen(const char *filename, const char *mode)
  * @note Need to override this function delay on the device used.
  */
 __attribute__((weak)) size_t OFR_fread(void *ptr, size_t size, size_t nmemb, FT_FILE *stream) {
-    return 0;
+	return 0;
 }
 
 /*!
@@ -118,7 +118,7 @@ __attribute__((weak)) size_t OFR_fread(void *ptr, size_t size, size_t nmemb, FT_
  * @note Need to override this function delay on the device used.
  */
 __attribute__((weak)) int OFR_fseek(FT_FILE *stream, long int offset, int whence) {
-    return -1;
+	return -1;
 }
 
 /*!
@@ -129,7 +129,7 @@ __attribute__((weak)) int OFR_fseek(FT_FILE *stream, long int offset, int whence
  * @note Need to override this function delay on the device used.
  */
 __attribute__((weak)) long int OFR_ftell(FT_FILE *stream) {
-    return -1L;
+	return -1L;
 }
 
 #endif

@@ -9,7 +9,7 @@
 #include "utils.h"
 
 class WebDataWidget : public Widget {
-public:
+   public:
     WebDataWidget(ScreenManager &manager, String url);
     ~WebDataWidget() override;
     void setup() override;
@@ -18,7 +18,7 @@ public:
     void buttonPressed(uint8_t buttonId, ButtonState state) override;
     String getName() override;
 
-private:
+   private:
     unsigned long m_lastUpdate = 0;
     unsigned long m_updateDelay = 1000;
     String httpRequestAddress;
@@ -26,4 +26,4 @@ private:
     int32_t m_defaultColor = TFT_WHITE;
     int32_t m_defaultBackground = TFT_BLACK;
 };
-#endif // WEB_DATA_WIDGET_H
+#endif  // WEB_DATA_WIDGET_H
